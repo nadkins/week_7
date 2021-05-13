@@ -1,0 +1,54 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.navbar {
+    z-index: 1;
+    position: fixed;
+    background: #fff;
+    width: 100%;
+    padding: 20px;
+}
+
+.parallax-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    transform-style: preserve-3d;
+}
+
+.parallax-wrapper::before {
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-image: url(./img/bkg-repeat.jpg);
+    position: absolute;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}
+
+.regular-wrapper {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 20vh;
+    background-color: aliceblue;
+    z-index: 2;
+    position: relative;
+}
+
+.content {
+    margin: 0 auto;
+    padding: 50px;
+    width: 50%;
+    background: #aaa;
+}
